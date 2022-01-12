@@ -1,14 +1,14 @@
 <template>
-<div class="reaction-block"><span class="reaction-block__text">PRESS ME</span></div>
+<div class="reaction-block" @click="stopTime"><span class="reaction-block__text">PRESS ME</span></div>
 </template>
 
 <script>
 export default {
     name: 'ReactionBlock',
     methods: {
-    StopTime() {
-      
-    }
+        stopTime() {
+            this.$emit('stopTime')
+        }
     }
 }
 </script>

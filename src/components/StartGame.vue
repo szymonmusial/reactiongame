@@ -5,11 +5,11 @@
 <script>
 export default {
     name: 'StartGame',
-    
+
     methods: {
-    startGame() {
-    this.$emit('startGame')
-    }
+        startGame() {
+            this.$emit('startGame')
+        }
     }
 }
 </script>
