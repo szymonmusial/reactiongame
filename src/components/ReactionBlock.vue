@@ -10,16 +10,22 @@ export default {
             this.$emit('stopTime')
         },
         randomPosition() {
-            const position = this.generateRandomNumber()
-            const style = "margin-left: " + position +"px"
-            console.log(style)
+            const position = this.generateRandomNumber(600)
+            const style = "margin-left: " + this.generateRandomSign() + position + "px"
             return style
         },
-        generateRandomNumber() {
-            // number bettwen 1 and 601
-            let number = Math.floor(Math.random() * 600) + 1;
+        generateRandomNumber(max) {
+            // number bettwen 1 and max + 1
+            let number = Math.floor(Math.random() * max) + 1;
             return number
         },
+        generateRandomSign() {
+            let sign = ""
+            if (this.generateRandomNumber(9) > 5) {
+                sign = '-'
+            }
+            return sign
+        }
     }
 }
 </script>
