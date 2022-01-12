@@ -4,14 +4,17 @@
 
 <script>
 export default {
-    name: 'title',
+    name: 'HeaderText',
     props: ['reactionTime'],
     computed: {
-        displayedTitle: function () {
+        displayedTitle() {
             let roundedReactionTime = Math.floor(this.reactionTime() / 100)
             let title = "Reaction test game"
             if (roundedReactionTime > 0) {
                 switch (roundedReactionTime) {
+                    case 0:
+                        title = "swietnie!"
+                        break;
                     case 1:
                         title = " Chyba oszukiwałeś "
                         break;

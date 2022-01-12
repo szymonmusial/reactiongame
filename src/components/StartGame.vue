@@ -1,10 +1,11 @@
 <template>
-<button class="start-game" @click="startGame"> START THE GAME</button>
+<button class="start-game" @click="startGame" :disabled="disabled"> START THE GAME</button>
 </template>
 
 <script>
 export default {
     name: 'StartGame',
+    props: ['disabled'],
 
     methods: {
         startGame() {

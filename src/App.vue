@@ -1,25 +1,24 @@
 <template>
 <div class="game">
-    <Title :reactionTime="reactionTime"></Title>
-    <start-game @startGame="startGame" :disabled="game.status"></start-game>
-    <reaction-block v-if="game.status" @stopTime="stopTime"></reaction-block>
-
+    <header-text :reactionTime="reactionTime"/>
+    <start-game @startGame="startGame" :disabled="game.status"/>
+    <reaction-block v-if="game.status" @stopTime="stopTime"/>
 </div>
 </template>
 
 <script>
 import StartGame from './components/StartGame.vue'
 import ReactionBlock from './components/ReactionBlock.vue'
-import Title from './components/Title'
+import HeaderText from './components/HeaderText.vue'
 
 export default {
     name: 'App',
     components: {
         StartGame,
         ReactionBlock,
-        Title
+        HeaderText
     },
-    data: function () {
+    data() {
         return {
             game: {
                 timeStart: 0,
@@ -31,7 +30,6 @@ export default {
     methods: {
         startGame() {
             const delay = this.generateRandomTime()
-            console.log(delay)
             setTimeout(this.showReactionBlock, delay)
         },
         showReactionBlock() {
@@ -46,7 +44,7 @@ export default {
             return time
         },
         getCurrentTime() {
-            let time = new Date()
+            const time = new Date()
             return time.getTime()
         },
         stopTime() {
