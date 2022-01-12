@@ -5,6 +5,7 @@
 <script>
 export default {
     name: 'StartGame',
+    
     methods: {
     startGame() {
     this.$emit('startGame')

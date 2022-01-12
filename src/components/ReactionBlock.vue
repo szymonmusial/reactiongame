@@ -4,24 +4,24 @@
 
 <script>
 export default {
-  name: 'StartGame'
+    name: 'ReactionBlock',
+    methods: {
+    StopTime() {
+      
+    }
+    }
 }
 </script>
 
-
 <style scoped>
-.reaction-block{
-  display: block;
-  width: 400px;
-  height: 200px;
-  background-color:#FB8C00;
-  border-radius: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.reaction-block {
+    display: block;
+    width: 400px;
+    height: 200px;
+    background-color: #FB8C00;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
-
-
 </style>
